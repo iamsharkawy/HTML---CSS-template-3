@@ -1,0 +1,322 @@
+/* css code */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Mohave', sans-serif;
+
+}
+
+
+
+/* start styling navbar */
+
+
+#navbar {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding-right: 20px;
+}
+
+#navbar .search {
+    padding: 20px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+#navbar .search:hover {
+  background-color: red;
+}
+
+#navbar   .listContainer .listItem {
+    list-style-type: none;
+    display: inline-block;
+    padding: 20px;
+    transition: all 1s ;
+}
+
+
+#navbar   .listContainer .listItem:hover {
+    background-color: gray;
+}
+
+#navbar   .listContainer .listItem .anchorItem {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+#navbar .moreList  {
+    position: relative;
+}
+
+#navbar .moreList .additionalList {
+    position: absolute;
+    top: 60px;
+    background-color: white;
+    color: black;
+    width: 150px;
+    display: none;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#navbar .moreList .additionalList  .addLI {
+  list-style-type: none;
+  width: 100%;
+  padding: 20px;
+
+}
+
+#navbar .moreList .additionalList  .addLI:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+#navbar .listContainer .moreList:hover .additionalList {
+   display: flex;
+}
+
+
+/* end of styling navbar */
+
+
+/* start styling header */
+#mainHeader {
+    background-image: url(images/chicago.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    margin-bottom: 75px;
+    animation-name: changeBg;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+   
+}
+
+#mainHeader .headerContent h3 {
+    font-weight: 400;
+    margin: 10px 0;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+#mainHeader .headerContent   p {
+    font-weight: bolder;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 50px;
+   }
+
+@keyframes changeBg {
+
+    30% { background-image: url(images/la.jpg);}
+    70%  {background-image: url(images/ny.jpg); }     
+}
+
+
+/* end of styling header */
+
+
+/* star band section */
+
+#theBand {
+    margin-bottom:30px ;
+}
+
+
+.container {
+    padding: 0px 400px;
+}
+
+#theBand  .bandTitle {
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin: 10px 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+#theBand .bandMusic {
+    font-style: italic;
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.5;
+    line-height: 1.5;
+
+}
+
+#theBand .bandDesc {
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 25px 0px;
+}
+
+#theBand .bandGroup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#theBand .bandGroup .bandItem {
+    width: 25%;
+}
+
+#theBand .bandGroup .bandItem p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+#theBand .bandGroup .bandItem img {
+    width: 100%;
+}
+
+/* end band section */
+
+
+/* start tour section */
+
+#tour {
+    background-color: black;
+    padding:75px 0px;
+}
+
+#tour  .tourTitle  {
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin: 10px 0;
+    font-size: 30px;
+    color: white;
+}
+
+#tour .tourDesc {
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    font-style: italic;
+    color: gray;
+}
+
+#tour .tourMonths {
+    background-color: white;
+    margin: 25px 0px;
+    padding: 15px;
+}
+
+#tour .tourMonths  li  {
+    color: #757575;
+    list-style-type: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+#tour .tourMonths .soldout {
+    color: white;
+    background-color: #f44336;
+    margin-left: 30px;
+}
+
+#tour .tourMonths .lastListItem {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#tour .tourMonths   .number {
+    background-color: black;
+    padding: 7px;
+    color: white;
+    border-radius: 50%;
+}
+
+#tour .counties {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#tour .counties .country {
+    width: 30%;
+}
+
+#tour .counties .country img {
+    width: 100%;
+}
+
+#tour  .counties .country .content {
+    background-color: white;
+    padding: 10px;
+}
+
+#tour  .counties .country .content button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: 15px 0px;
+    border: none;
+    cursor: pointer;
+}
+
+#tour  .counties .country .content button:hover {
+    background-color: gray;
+}
+
+
+/* responsive tablet version */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+ 
+    .container {
+        padding: 0px 270px;
+    }
+
+
+
+    #tour .counties  {
+        display: block;
+
+    }
+
+    #tour .counties .country {
+        width: 100%;
+    }
+
+
+
+}
+
+
+/* responsive mobile version */
+
+@media (max-width: 767px) {
+    #navbar {
+        flex-direction: column;
+    }
+
+    #navbar .listContainer .listItem  {
+        display: block;
+    }
+
+    .container {
+        padding: 0px 45px;
+    }
+}
